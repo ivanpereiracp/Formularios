@@ -5,6 +5,8 @@ document.querySelector("#submit").addEventListener("click", e => {
   const telefono = "5543998669972";
 
   const cliente = document.querySelector("#cliente").value;
+  const titulo = document.querySelector("#Titulo").value;
+  const endereco = document.querySelector("#Endereco").value;
   const fecha = document.querySelector("#fecha").value;
   const hora = document.querySelector("#hora").value;
   const empleado = document.querySelector("#empleado").value;
@@ -15,12 +17,16 @@ document.querySelector("#submit").addEventListener("click", e => {
   resp.classList.remove("send");
 
   const url = `https://api.whatsapp.com/send?phone=${telefono}&text=
-		*_MI NEGOCIO_*%0A
-		*Reservas*%0A%0A
-		*¿Cuál es tu nombre?*%0A
+		*_DECLARAÇÃO DE IMPOSTO DE RENDA_*%0A
+		*Dados necessários*%0A%0A
+		*Nome completo*%0A
 		${cliente}%0A
-		*Indica la fecha de tu reserva*%0A
+		*Data de nascimento*%0A
 		${fecha}%0A
+		*_Título de eleitor_*%0A
+		${titulo}%0A
+		*_Endereço_*%0A
+		${endereco}%0A
 		*Indica la hora de tu reserva*%0A
 		${hora}%0A
 		*Empleado de preferencia*%0A
