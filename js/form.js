@@ -5,9 +5,10 @@ document.querySelector("#submit").addEventListener("click", e => {
   const telefono = "5543998669972";
 
   const cliente = document.querySelector("#cliente").value;
-  const titulo = document.querySelector("#Titulo").value;
-  const endereco = document.querySelector("#Endereco").value;
+  const titulo = document.querySelector("#titulo").value;
+  const endereco = document.querySelector("#endereco").value;
   const fecha = document.querySelector("#fecha").value;
+  const tipoconta = document.querySelector("#tipoconta").value;
   const hora = document.querySelector("#hora").value;
   const empleado = document.querySelector("#empleado").value;
   const servicio = document.querySelector("#servicio").value;
@@ -27,6 +28,8 @@ document.querySelector("#submit").addEventListener("click", e => {
 		${titulo}%0A
 		*_Endereço_*%0A
 		${endereco}%0A
+		*_Tipo de conta_*%0A
+		${tipoconta}%0A		
 		*Indica la hora de tu reserva*%0A
 		${hora}%0A
 		*Empleado de preferencia*%0A
@@ -34,14 +37,14 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*¿Cuál es el servicio que se desea realizar?*%0A
 		${servicio}`;
 
-  if (cliente === "" || fecha === "" || hora === "") {
+  if (cliente === "" || fecha === "" || titulo === "" || endereco === "") {
     resp.classList.add("fail");
-    resp.innerHTML = `Faltan algunos datos, ${cliente}`;
+    resp.innerHTML = `Faltam alguns dados, ${cliente}`;
     return false;
   }
   resp.classList.remove("fail");
   resp.classList.add("send");
-  resp.innerHTML = `Se ha enviado tu reserva, ${cliente}`;
+  resp.innerHTML = `Os seus dados foram enviados com sucesso, muito obrigado, ${cliente}`;
 
   window.open(url);
 });
