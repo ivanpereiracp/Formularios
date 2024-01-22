@@ -130,11 +130,21 @@
       <input id="titulo" type="text" class="formulario__input" size="12" maxlength="12"
         onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Somente números" />
 
+      <label for="ecivil" class="formulario__label">Estado civil</label>
+      <select id="ecivil" name="ecivil" class="formulario__input">
+        <option>Casado(a)</option>
+        <option>Divorciado(a)</option>
+        <option>Solteiro(a)</option>
+      </select>
+
       <label for="endereco" class="formulario__label">Endereço</label>
       <input id="endereco" type="text" class="formulario__input" placeholder="Informe o seu endereço com o número" />
 
       <label for="bairro" class="formulario__label">Bairro</label>
       <input id="bairro" type="text" class="formulario__input" placeholder="Informe o seu bairro" />
+
+      <label for="cidade" class="formulario__label">Cidade</label>
+      <input id="cidade" type="text" class="formulario__input" placeholder="Informe a sua cidade" />
 
       <label for="telefone" class="formulario__label">Telefone</label>
       <input id="telefone" type="tel" class="formulario__input" placeholder="(DDD)000000000" maxlength="15"
@@ -195,7 +205,7 @@
     <small>Informe Quantidade de dependentes</small>
     <hr>
     <label for="qtdep" class="formulario__label">Nº de dependentes</label>
-    <select id="qtdep" name="qtdep" class="formulario__input"  onchange="exibir_ocultar(this);">
+    <select id="qtdep" name="qtdep" class="formulario__input" onchange="exibir_ocultar(this);">
       <option>0</option>
       <option>1</option>
       <option>2</option>
@@ -308,6 +318,7 @@
     <p class="Abas">
       ALIMENTANDOS
     </p>
+
     <section id="Alimentandos">
       <div id="dival1">
         <label for="dival1" class="Subabas">ALIMENTANDO 1</label>
@@ -319,40 +330,107 @@
           <label for="CPFal1" class="formulario__label">CPF</label>
           <input id="CPFal1" type="text" class="formulario__input" placeholder="Informe o nº do CPF do alimentando"
             size="14" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );" />
-        <div>
-          <p>
-          <div id="dival2">
-            <label for="dival2" class="Subabas">ALIMENTANDO 2</label>
-            <p>
-              <label for="nomeal2" class="formulario__label">Nome</label>
-              <input id="nomeal2" type="text" class="formulario__input" placeholder="Nome do alimentando" />
-              <label for="dataal2" class="formulario__label">Data de nascimento</label>
-              <input id="dataal2" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
-              <label for="CPFal2" class="formulario__label">CPF</label>
-              <input id="CPFal2" type="text" class="formulario__input" placeholder="Informe o nº do CPF do alimentando"
-                size="14" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );" />
-            <div>
-              <p>
+        <p>
+      </div>
+
     </section>
+
     <p class="Abas">
       BENS E DIREITOS
     </p>
 
-    <section id="bensedireitos">
-      <div id="bem1">
-        <label for="bem1" class="Subabas">BEM/E OU DIREITO 1</label>
+    <div id="bem1">
+      <label for="bem1" class="Subabas">BEM 1</label>
+      <p>
+        <hr>
+
+      <section id="bensedireitos">
+        <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+        <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+          <option></option>
+          <option>Casa</option>
+          <option>Apartamento</option>
+          <option>Terreno</option>
+          <option>Chácara</option>
+          <option>Sítio</option>
+          <option>Motocicleta</option>
+          <option>Carro</option>
+          <option>Sítio</option>
+          <option>Saldo em conta poupança</option>
+          <option>Saldo em conta corrente</option>
+          <option>Investimentos</option>
+        </select>
         <p>
-          <label for="nomebem1" class="formulario__label">Descrição do bem</label>
-          <input id="nomebem1" type="text" class="formulario__input" placeholder="Nome do alimentando" />
-          <label for="descbem1" class="formulario__label">Descrição do bem</label>
-          <textarea id="descbem1"
-            placeholder="Informe se o carro é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "
-            class="formulario__input" rows="8" cols="50">
-          </textarea>
-      </div>
+          <label for="nomebem1" class="formulario__label">Renavam</label>
+          <input id="nomebem1" type="text" class="formulario__input"
+            placeholder="Nº do renavam do veículo - Somente números" />
+
+          <label for="descbem1" class="formulario__label">Descrição</label>
+          <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
+            placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
+
+          <label for="valorbem1" class="formulario__label">Valor do bem</label>
+          <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
+
+          <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+          <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+            <option></option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Terreno</option>
+            <option>Chácara</option>
+            <option>Sítio</option>
+            <option>Motocicleta</option>
+            <option>Carro</option>
+            <option>Sítio</option>
+            <option>Saldo em conta poupança</option>
+            <option>Saldo em conta corrente</option>
+            <option>Investimentos</option>
+          </select>
+        <p>
+          <label for="nomebem1" class="formulario__label">Inscrição municipal (IPTU)</label>
+          <input id="nomebem1" type="text" class="formulario__input"
+            placeholder="Nº da inscrição Municipal. Tem no carnê do IPTU" />
+
+          <label for="fecha" class="formulario__label">Data de aquisição</label>
+          <input id="fecha" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+
+          <label for="descbem1" class="formulario__label">Descrição</label>
+          <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
+            placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
+
+          <label for="endereco" class="formulario__label">Logradouro</label>
+          <input id="endereco" type="text" class="formulario__input" placeholder="Informe o endereço do bem" />
+
+          <label for="endereco" class="formulario__label">Número</label>
+          <input id="endereco" type="text" class="formulario__input" placeholder="Informe o número" />
+
+          <label for="bairro" class="formulario__label">Bairro</label>
+          <input id="bairro" type="text" class="formulario__input" placeholder="Informe o bairro" />
+
+          <label for="cidade" class="formulario__label">Cidade</label>
+          <input id="cidade" type="text" class="formulario__input" placeholder="Informe a cidade" />
+
+          <label for="tipobem" class="formulario__label">Registrado no cartório de imóveis?</label>
+          <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+            <option></option>
+            <option>Não</option>
+            <option>Sim</option>
+          </select>
+
+          <label for="matricula" class="formulario__label">Matrícula do imóvel</label>
+          <input id="matricula" type="text" class="formulario__input" placeholder="Informe a matrícula do imóvel" />
+
+          <label for="cartorio" class="formulario__label">Cartório</label>
+          <input id="cartorio" type="text" class="formulario__input" placeholder="Informe o nome do cartório" />
+
+          <label for="valorbem1" class="formulario__label">Valor do bem</label>
+          <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
+
+    </div>
 
     </section>
-    <label for="hora" class="formulario__label">Indica la hora de tu reserva</label>
+    <!--<label for="hora" class="formulario__label">Indica la hora de tu reserva</label>
     <input id="hora" type="time" class="formulario__input" />
 
     <label for="empleado" class="formulario__label">EMPLEADO de preferencia</label>
@@ -368,7 +446,7 @@
       <option>SERVICIO 3 - $VALOR</option>
       <option>SERVICIO 4 - $VALOR</option>
       <option>SERVICIO 5 - $VALOR</option>
-    </select>
+    </select>-->
 
     <div id="respuesta"></div>
 
