@@ -339,13 +339,101 @@
       BENS E DIREITOS
     </p>
 
-    <div id="bem1">
-      <label for="bem1" class="Subabas">BEM 1</label>
-      <p>
-        <hr>
+    <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+    <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+      <option></option>
+      <option>Casa</option>
+      <option>Apartamento</option>
+      <option>Terreno</option>
+      <option>Chácara</option>
+      <option>Sítio</option>
+      <option>Motocicleta</option>
+      <option>Carro</option>
+      <option>Sítio</option>
+      <option>Saldo em conta poupança</option>
+      <option>Saldo em conta corrente</option>
+      <option>Investimentos</option>
+    </select>
+    <p>
 
-      <section id="bensedireitos">
+
+    <section id="bensedireitos">
+      <div id="veiculo">
+        <label for="veiculo" class="Subabas">Veículo</label>
+        <p>
+          <hr>
+          <label for="nomebem1" class="formulario__label">Renavam</label>
+          <input id="nomebem1" type="text" class="formulario__input"
+            placeholder="Nº do renavam do veículo - Somente números" />
+
+          <label for="descbem1" class="formulario__label">Descrição</label>
+          <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
+            placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
+
+          <label for="valorbem1" class="formulario__label">Valor do bem</label>
+          <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
+        </p>
+      </div>
+
+      <div id="imovel">
+      <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+      <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+        <option></option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+        <option>Terreno</option>
+        <option>Chácara</option>
+        <option>Sítio</option>
+        <option>Motocicleta</option>
+        <option>Carro</option>
+        <option>Sítio</option>
+        <option>Saldo em conta poupança</option>
+        <option>Saldo em conta corrente</option>
+        <option>Investimentos</option>
+      </select>
+      <p>
+        <label for="nomebem1" class="formulario__label">Inscrição municipal (IPTU)</label>
+        <input id="nomebem1" type="text" class="formulario__input"
+          placeholder="Nº da inscrição Municipal. Tem no carnê do IPTU" />
+
+        <label for="fecha" class="formulario__label">Data de aquisição</label>
+        <input id="fecha" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+
+        <label for="descbem1" class="formulario__label">Descrição</label>
+        <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
+          placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
+
+        <label for="endereco" class="formulario__label">Logradouro</label>
+        <input id="endereco" type="text" class="formulario__input" placeholder="Informe o endereço do bem" />
+
+        <label for="endereco" class="formulario__label">Número</label>
+        <input id="endereco" type="text" class="formulario__input" placeholder="Informe o número" />
+
+        <label for="bairro" class="formulario__label">Bairro</label>
+        <input id="bairro" type="text" class="formulario__input" placeholder="Informe o bairro" />
+
+        <label for="cidade" class="formulario__label">Cidade</label>
+        <input id="cidade" type="text" class="formulario__input" placeholder="Informe a cidade" />
+
+        <label for="tipobem" class="formulario__label">Registrado no cartório de imóveis?</label>
+        <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+          <option></option>
+          <option>Não</option>
+          <option>Sim</option>
+        </select>
+
+        <label for="matricula" class="formulario__label">Matrícula do imóvel</label>
+        <input id="matricula" type="text" class="formulario__input" placeholder="Informe a matrícula do imóvel" />
+
+        <label for="cartorio" class="formulario__label">Cartório</label>
+        <input id="cartorio" type="text" class="formulario__input" placeholder="Informe o nome do cartório" />
+
+        <label for="valorbem1" class="formulario__label">Valor do bem</label>
+        <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
+
         <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+        </div>
+        <div id="veiculo"></div>
         <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
           <option></option>
           <option>Casa</option>
@@ -360,74 +448,10 @@
           <option>Saldo em conta corrente</option>
           <option>Investimentos</option>
         </select>
-        <p>
-          <label for="nomebem1" class="formulario__label">Renavam</label>
-          <input id="nomebem1" type="text" class="formulario__input"
-            placeholder="Nº do renavam do veículo - Somente números" />
+      <p>
+      <div>Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.</div>
 
-          <label for="descbem1" class="formulario__label">Descrição</label>
-          <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
-            placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
-
-          <label for="valorbem1" class="formulario__label">Valor do bem</label>
-          <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
-
-          <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
-          <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
-            <option></option>
-            <option>Casa</option>
-            <option>Apartamento</option>
-            <option>Terreno</option>
-            <option>Chácara</option>
-            <option>Sítio</option>
-            <option>Motocicleta</option>
-            <option>Carro</option>
-            <option>Sítio</option>
-            <option>Saldo em conta poupança</option>
-            <option>Saldo em conta corrente</option>
-            <option>Investimentos</option>
-          </select>
-        <p>
-          <label for="nomebem1" class="formulario__label">Inscrição municipal (IPTU)</label>
-          <input id="nomebem1" type="text" class="formulario__input"
-            placeholder="Nº da inscrição Municipal. Tem no carnê do IPTU" />
-
-          <label for="fecha" class="formulario__label">Data de aquisição</label>
-          <input id="fecha" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
-
-          <label for="descbem1" class="formulario__label">Descrição</label>
-          <textarea id="descbem1" class="formulario__input" rows="8" cols="50"
-            placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas "></textarea>
-
-          <label for="endereco" class="formulario__label">Logradouro</label>
-          <input id="endereco" type="text" class="formulario__input" placeholder="Informe o endereço do bem" />
-
-          <label for="endereco" class="formulario__label">Número</label>
-          <input id="endereco" type="text" class="formulario__input" placeholder="Informe o número" />
-
-          <label for="bairro" class="formulario__label">Bairro</label>
-          <input id="bairro" type="text" class="formulario__input" placeholder="Informe o bairro" />
-
-          <label for="cidade" class="formulario__label">Cidade</label>
-          <input id="cidade" type="text" class="formulario__input" placeholder="Informe a cidade" />
-
-          <label for="tipobem" class="formulario__label">Registrado no cartório de imóveis?</label>
-          <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
-            <option></option>
-            <option>Não</option>
-            <option>Sim</option>
-          </select>
-
-          <label for="matricula" class="formulario__label">Matrícula do imóvel</label>
-          <input id="matricula" type="text" class="formulario__input" placeholder="Informe a matrícula do imóvel" />
-
-          <label for="cartorio" class="formulario__label">Cartório</label>
-          <input id="cartorio" type="text" class="formulario__input" placeholder="Informe o nome do cartório" />
-
-          <label for="valorbem1" class="formulario__label">Valor do bem</label>
-          <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
-
-    </div>
+      </div>
 
     </section>
     <!--<label for="hora" class="formulario__label">Indica la hora de tu reserva</label>
