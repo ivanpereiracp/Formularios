@@ -47,7 +47,7 @@ body {
   border:1px solid #AED6F1;
 }
 
-#divconta, #divbanco, #divagencia, #divdep2, #divdep3, #divdep4, #dival2, #divdep1, #divdep2, #divdep3, #divdep4{
+#divconta, #divbanco, #divagencia, #divdep2, #divdep3, #divdep4, #dival2, #divdep1, #divdep2, #divdep3, #divdep4, #veiculo, #imovel{
 	display:none;
 }
 
