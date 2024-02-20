@@ -55,10 +55,22 @@
       else if (val.value == 'Carro' || val.value == 'Motocicleta') {
         document.getElementById('veiculo').style.display = 'block';
         document.getElementById('imovel').style.display = 'none';
+        document.getElementById('contas').style.display = 'none';
+      }
+      else if (val.value == 'Selecionar') {
+        document.getElementById('veiculo').style.display = 'none';
+        document.getElementById('imovel').style.display = 'none';
+        document.getElementById('contas').style.display = 'none';
       }
       else if (val.value == 'Casa' || val.value == 'Apartamento' || val.value == 'Terreno' || val.value == 'Chácara' || val.value == 'Sítio') {
         document.getElementById('veiculo').style.display = 'none';
         document.getElementById('imovel').style.display = 'block';
+        document.getElementById('contas').style.display = 'none';
+      }
+      else if (val.value == 'Saldo em conta poupança' || val.value == 'Saldo em conta corrente' || val.value == 'Investimentos') {
+        document.getElementById('veiculo').style.display = 'none';
+        document.getElementById('imovel').style.display = 'none';
+        document.getElementById('contas').style.display = 'block';
       }
       else {
         document.getElementById('divbanco').style.display = 'block';
@@ -349,7 +361,7 @@
 
     <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
     <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
-      <option></option>
+      <option>Selecionar</option>
       <option>Casa</option>
       <option>Apartamento</option>
       <option>Terreno</option>
@@ -357,7 +369,6 @@
       <option>Sítio</option>
       <option>Motocicleta</option>
       <option>Carro</option>
-      <option>Sítio</option>
       <option>Saldo em conta poupança</option>
       <option>Saldo em conta corrente</option>
       <option>Investimentos</option>
@@ -384,21 +395,24 @@
       </div>
 
       <div id="imovel">
-        <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
-        <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
-          <option></option>
-          <option>Casa</option>
-          <option>Apartamento</option>
-          <option>Terreno</option>
-          <option>Chácara</option>
-          <option>Sítio</option>
-          <option>Motocicleta</option>
-          <option>Carro</option>
-          <option>Sítio</option>
-          <option>Saldo em conta poupança</option>
-          <option>Saldo em conta corrente</option>
-          <option>Investimentos</option>
-        </select>
+        <label for="veiculo" class="Subabas">Imóvel</label>
+        <p>
+          <hr>
+          <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+          <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+            <option></option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Terreno</option>
+            <option>Chácara</option>
+            <option>Sítio</option>
+            <option>Motocicleta</option>
+            <option>Carro</option>
+            <option>Sítio</option>
+            <option>Saldo em conta poupança</option>
+            <option>Saldo em conta corrente</option>
+            <option>Investimentos</option>
+          </select>
         <p>
           <label for="nomebem1" class="formulario__label">Inscrição municipal (IPTU)</label>
           <input id="nomebem1" type="text" class="formulario__input"
@@ -439,9 +453,9 @@
           <label for="valorbem1" class="formulario__label">Valor do bem</label>
           <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
 
-          <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+      <!--    <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>-->
       </div>
-      <div id="veiculo"></div>
+      <!--<div id="veiculo"></div>
       <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
         <option></option>
         <option>Casa</option>
@@ -455,9 +469,9 @@
         <option>Saldo em conta poupança</option>
         <option>Saldo em conta corrente</option>
         <option>Investimentos</option>
-      </select>
+      </select>-->
       <p>
-      <div>Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.</div>
+      <div id="contas">Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.</div>
 
       </div>
 

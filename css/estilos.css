@@ -47,11 +47,11 @@ body {
   border:1px solid #AED6F1;
 }
 
-#divconta, #divbanco, #divagencia, #divdep2, #divdep3, #divdep4, #dival2, #divdep1, #divdep2, #divdep3, #divdep4, #veiculo, #imovel{
+#divconta, #divbanco, #divagencia, #divdep2, #divdep3, #divdep4, #dival2, #divdep1, #divdep2, #divdep3, #divdep4, #veiculo, #imovel, #contas{
 	display:none;
 }
 
-#divdep1, #dival1, #divdep2, #dival2, #divdep3, #dival3, #divdep4, #dival4{
+#divdep1, #dival1, #divdep2, #dival2, #divdep3, #dival3, #divdep4, #dival4, #veiculo, #imovel{
 	border:1px solid #AED6F1;
 	padding-left:5px;
 	padding-right:5px;
