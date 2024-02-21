@@ -153,6 +153,7 @@ body {
 
 .formulario__inserir {
   background: #0263b3;/*rgba(0, 0, 0, 0.7);*/
+  background-image: url(plus.png);
   color: white;
   padding: 10px 20px;
   cursor: pointer;
