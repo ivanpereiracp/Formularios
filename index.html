@@ -7,6 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Formulário para declaração de imposto de renda</title>
   <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    #container {
+        margin-top: 20px;
+    }
+    .form-container {
+        margin-bottom: 10px;
+    }
+</style>
   <script>
     // Exibir e ocultar elementos na tela
     function exibir_ocultar(val) {
@@ -121,6 +129,40 @@
       cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
       cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
       return cpf
+    }
+  </script>
+  <script>
+    function adicionarDiv() {
+      // Criar a nova div
+      var novaDiv = document.createElement("div");
+      novaDiv.classList.add("form-container");
+
+      // Criar o formulário dentro da nova div
+      var novoFormulario = document.createElement("form");
+      novoFormulario.innerHTML = `
+            
+            <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
+    <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+      <option>Selecionar</option>
+      <option>Casa</option>
+      <option>Apartamento</option>
+      <option>Terreno</option>
+      <option>Chácara</option>
+      <option>Sítio</option>
+      <option>Motocicleta</option>
+      <option>Carro</option>
+      <option>Saldo em conta poupança</option>
+      <option>Saldo em conta corrente</option>
+      <option>Investimentos</option>
+    </select>
+    <p>
+        `;
+
+      // Adicionar o formulário à nova div
+      novaDiv.appendChild(novoFormulario);
+
+      // Adicionar a nova div ao container
+      document.getElementById("container").appendChild(novaDiv);
     }
   </script>
 </head>
@@ -392,6 +434,13 @@
           <label for="valorbem1" class="formulario__label">Valor do bem</label>
           <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
         </p>
+        <div id="container">
+        <input class="formulario__inserir" name="inserir" title="Inserir outro bem" id="inserir" type="button" 
+          value="+Inserir outro" 
+          onclick="adicionarDiv()"
+          />
+        <br>
+        </div>
       </div>
 
       <div id="imovel">
@@ -453,7 +502,7 @@
           <label for="valorbem1" class="formulario__label">Valor do bem</label>
           <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
 
-      <!--    <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>-->
+          <!--    <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>-->
       </div>
       <!--<div id="veiculo"></div>
       <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
@@ -471,7 +520,8 @@
         <option>Investimentos</option>
       </select>-->
       <p>
-      <div id="contas">Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.</div>
+      <div id="contas">Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.
+      </div>
 
       </div>
 

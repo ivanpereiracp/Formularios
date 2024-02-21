@@ -151,6 +151,19 @@ body {
     margin-top: -120px;
 } */
 
+.formulario__inserir {
+  background: #0263b3;/*rgba(0, 0, 0, 0.7);*/
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  margin-left:35%;
+  width: 28%;
+  font-size: 1, 3em;
+}
+
 /* respuesta del formulario */
 #respuesta {
   width: 100%;
