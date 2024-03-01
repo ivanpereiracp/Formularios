@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="css/estilos.css" />
   <style>
     #container {
-        margin-top: 20px;
+      margin-top: 20px;
     }
+
     .form-container {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
-</style>
+  </style>
   <script>
     // Exibir e ocultar elementos na tela
     function exibir_ocultar(val) {
@@ -435,11 +436,9 @@
           <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
         </p>
         <div id="container">
-        <input  class="formulario__inserir" name="inserir" title="Inserir outro bem" id="inserir" type="button" 
-        value="Inserir outro" 
-          onclick="adicionarDiv()"
-          />
-        <br>
+          <input class="formulario__inserir" name="inserir" title="Inserir outro bem" id="inserir" type="button"
+            value="Inserir outro" onclick="adicionarDiv()" />
+          <br>
         </div>
       </div>
 
@@ -504,6 +503,7 @@
 
           <!--    <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>-->
       </div>
+
       <!--<div id="veiculo"></div>
       <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
         <option></option>
@@ -524,7 +524,6 @@
       </div>
 
       </div>
-
     </section>
     <!--<label for="hora" class="formulario__label">Indica la hora de tu reserva</label>
     <input id="hora" type="time" class="formulario__input" />
@@ -544,11 +543,42 @@
       <option>SERVICIO 5 - $VALOR</option>
     </select>-->
 
+    <div>
+      <select id="selectOption" class="formulario__input">
+        <option value="">Selecione uma opção</option>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+        <option value="3">Opção 3</option>
+      </select>
+      <div class="container2" id="container2"></div>
+      <script>
+        document.getElementById('selectOption').addEventListener('change', function () {
+          var selectedValue = this.value;
+          if (selectedValue !== "") {
+            addDiv(selectedValue);
+          }
+        });
+        function addDiv(optionValue) {
+          var container = document.getElementById('container2');
+          var div = document.createElement('div2');
+          div.className = 'box';
+          div.innerHTML = 'Opção selecionada: ' + optionValue + '<button onclick="removeDiv(this)">Excluir</button>';
+          container.appendChild(div);
+        }
+        function removeDiv(element) {
+          var divToRemove = element.parentElement;
+          divToRemove.remove();
+        }
+      </script>
+    </div>
+
     <div id="respuesta"></div>
 
     <button id="submit" class="formulario__submit">Enviar via WhatsApp</button>
   </form>
   <script src="js/form.js"></script>
+
+  
 </body>
 
 </html>
