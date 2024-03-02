@@ -403,7 +403,7 @@
     </p>
 
     <label for="tipobem" class="formulario__label">Informe o tipo de bem ou direito</label>
-    <select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
+    <!--<select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">
       <option>Selecionar</option>
       <option>Casa</option>
       <option>Apartamento</option>
@@ -416,7 +416,7 @@
       <option>Saldo em conta corrente</option>
       <option>Investimentos</option>
     </select>
-    <p>
+    <p>-->
 
 
     <section id="bensedireitos">
@@ -435,11 +435,11 @@
           <label for="valorbem1" class="formulario__label">Valor do bem</label>
           <input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />
         </p>
-        <div id="container">
+        <!--<div id="container">
           <input class="formulario__inserir" name="inserir" title="Inserir outro bem" id="inserir" type="button"
             value="Inserir outro" onclick="adicionarDiv()" />
           <br>
-        </div>
+        </div>-->
       </div>
 
       <div id="imovel">
@@ -545,24 +545,47 @@
 
     <div>
       <select id="selectOption" class="formulario__input">
-        <option value="">Selecione uma opção</option>
-        <option value="1">Opção 1</option>
-        <option value="2">Opção 2</option>
-        <option value="3">Opção 3</option>
+        <option value="">Selecionar</option>
+        <option value="1">Casa</option>
+        <option value="2">Apartamento</option>
+        <option value="3">Terreno</option>
+        <option value="1">Chácara</option>
+        <option value="4">Sítio</option>
+        <option value="5">Motocicleta</option>
+        <option value="6">Carro</option>
+        <option value="7">Sítio</option>
+        <option value="8">Saldo em conta poupança</option>
+        <option value="9">Saldo em conta corrente</option>
+        <option value="10">Investimentos</option>
       </select>
+
       <div class="container2" id="container2"></div>
       <script>
         document.getElementById('selectOption').addEventListener('change', function () {
+
+          //var texto = this.options[this.selectedIndex].text;
           var selectedValue = this.value;
+
           if (selectedValue !== "") {
             addDiv(selectedValue);
           }
         });
+
         function addDiv(optionValue) {
           var container = document.getElementById('container2');
           var div = document.createElement('div2');
           div.className = 'box';
-          div.innerHTML = 'Opção selecionada: ' + optionValue + '<button onclick="removeDiv(this)">Excluir</button>';
+
+          div.innerHTML = '<label for="veiculo" class="Subabas" style="top:-8px;border-radius: 10px 10px 0px 0px;background-color:#0575ac;' + 
+          'color:white;"' +
+          '>Automóvel</label>' + 
+            '<br><p> <label for="nomebem1" class="formulario__label">Renavam</label><input id="nomebem1" type="text"' +
+            'class="formulario__input"     placeholder="Nº do renavam do veículo - Somente números" /> <label for="descbem1" ' +
+            'class="formulario__label">Descrição</label> <textarea id="descbem1" class="formulario__input" rows="8" cols="50" ' +
+            'placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas ">' +
+            '</textarea> <label for="valorbem1" class="formulario__label">Valor do bem</label> <input id="valorbem1" type="text" ' +
+            'class="formulario__input" placeholder="Informe o valor do bem" /></p>'
+            + '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>';
           container.appendChild(div);
         }
         function removeDiv(element) {
@@ -578,7 +601,7 @@
   </form>
   <script src="js/form.js"></script>
 
-  
+
 </body>
 
 </html>
