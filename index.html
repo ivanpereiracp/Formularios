@@ -559,7 +559,7 @@
         <option value="10">Investimentos</option>
       </select>
 
-      <div class="container2" id="container2"></div>
+      <div class="container2" id="container2"></div></div>
       <script>
         document.getElementById('selectOption').addEventListener('change', function () {
 
@@ -584,8 +584,9 @@
             'class="formulario__label">Descrição</label> <textarea id="descbem1" class="formulario__input" rows="8" cols="50" ' +
             'placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor e quantidade das parcelas ">' +
             '</textarea> <label for="valorbem1" class="formulario__label">Valor do bem</label> <input id="valorbem1" type="text" ' +
-            'class="formulario__input" placeholder="Informe o valor do bem" /></p>'
-            + '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>';
+            'class="formulario__input" placeholder="Informe o valor do bem" /></p>' +
+            '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>' +
+            '<p>';
           container.appendChild(div);
         }
         function removeDiv(element) {
