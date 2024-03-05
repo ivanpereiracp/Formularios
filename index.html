@@ -549,36 +549,106 @@
         <option value="1">Casa</option>
         <option value="2">Apartamento</option>
         <option value="3">Terreno</option>
-        <option value="1">Chácara</option>
-        <option value="4">Sítio</option>
-        <option value="5">Motocicleta</option>
-        <option value="6">Carro</option>
-        <option value="7">Sítio</option>
+        <option value="4">Chácara</option>
+        <option value="5">Sítio</option>
+        <option value="6">Motocicleta</option>
+        <option value="7">Carro</option>
         <option value="8">Saldo em conta poupança</option>
         <option value="9">Saldo em conta corrente</option>
         <option value="10">Investimentos</option>
       </select>
 
-      <div class="container2" id="container2"></div></div>
-      <script>
-        document.getElementById('selectOption').addEventListener('change', function () {
+      <div class="container2" id="container2"></div>
+    </div>
+    <script>
+      document.getElementById('selectOption').addEventListener('change', function () {
 
-          //var texto = this.options[this.selectedIndex].text;
-          var selectedValue = this.value;
+        //var texto = this.options[this.selectedIndex].text;
+        var selectedValue = this.value;
 
-          if (selectedValue !== "") {
-            addDiv(selectedValue);
+        if (selectedValue !== "") {
+          addDiv(selectedValue);
+        }
+      });
+
+      function addDiv(optionValue) {
+        var container = document.getElementById('container2');
+        var div = document.createElement('div2');
+        var tipo = ""
+        div.className = 'box';
+
+        if (optionValue <= "5") {
+          if (optionValue == "1") {
+            var tipo = "Casa";
           }
-        });
+          else if (optionValue == "2") {
+            var tipo = "Apartamento";
+          }
+          else if (optionValue == "3") {
+            var tipo = "Terreno";
+          }
+          else if (optionValue == "4") {
+            var tipo = "Chácara";
+          }
+          else if (optionValue == "5") {
+            var tipo = "Sítio";
+          }
+          div.innerHTML = '<label for="veiculo" class="Subabas"style="top:-8px;border-radius: 10px 10px 0px 0px;background-color:#0575ac;' +
+            ';color:white;">' + tipo +
+            '</label>' +
+            '<label for="nomebem1" class="formulario__label">Inscrição municipal (IPTU)</label>' +
+            '<input id="nomebem1" type="text" class="formulario__input"' +
+            ' placeholder="Nº da inscrição Municipal. Tem no carnê do IPTU" />' +
 
-        function addDiv(optionValue) {
-          var container = document.getElementById('container2');
-          var div = document.createElement('div2');
-          div.className = 'box';
+            '<label for="fecha" class="formulario__label">Data de aquisição</label>' +
+            '<input id="fecha" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />' +
 
-          div.innerHTML = '<label for="veiculo" class="Subabas" style="top:-8px;border-radius: 10px 10px 0px 0px;background-color:#0575ac;' + 
-          'color:white;"' +
-          '>Automóvel</label>' + 
+            '<label for="descbem1" class="formulario__label">Descrição</label>' +
+            '<textarea id="descbem1" class="formulario__input" rows="8" cols="50"' +
+            ' placeholder="Informe se o veículo é financiado ou quitado, nome da financiadora, valor' +
+            ' e quantidade das parcelas "></textarea>' +
+
+            '<label for="endereco" class="formulario__label">Logradouro</label>' +
+            '<input id="endereco" type="text" class="formulario__input" placeholder="Informe o endereço do bem" />' +
+
+            '<label for="endereco" class="formulario__label">Número</label>' +
+            '<input id="endereco" type="text" class="formulario__input" placeholder="Informe o número" />' +
+
+            '<label for="bairro" class="formulario__label">Bairro</label>' +
+            '<input id="bairro" type="text" class="formulario__input" placeholder="Informe o bairro" />' +
+
+            '<label for="cidade" class="formulario__label">Cidade</label>' +
+            '<input id="cidade" type="text" class="formulario__input" placeholder="Informe a cidade" />' +
+
+            '<label for="tipobem" class="formulario__label">Registrado no cartório de imóveis?</label>' +
+            '<select id="tipobem" name="tipobem" class="formulario__input" onchange="exibir_ocultar(this);">' +
+            ' <option></option>' +
+            '<option>Não</option>' +
+            '<option>Sim</option>' +
+            '</select>' +
+
+            '<label for="matricula" class="formulario__label">Matrícula do imóvel</label>' +
+            '<input id="matricula" type="text" class="formulario__input" placeholder="Informe a matrícula do imóvel" />' +
+
+            '<label for="cartorio" class="formulario__label">Cartório</label>' +
+            '<input id="cartorio" type="text" class="formulario__input" placeholder="Informe o nome do cartório" />' +
+
+            '<label for="valorbem1" class="formulario__label">Valor do bem</label>' +
+            '<input id="valorbem1" type="text" class="formulario__input" placeholder="Informe o valor do bem" />' +
+            '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>' +
+            '<p>';
+
+        }
+        if (optionValue == "6" || optionValue == "7") {
+          if (optionValue == "6") {
+            var tipo = "Motocicleta";
+          }
+          else if (optionValue == "7") {
+            var tipo = "Carro";
+          }
+          div.innerHTML = '<label for="veiculo" class="Subabas" style="top:-8px;border-radius: 10px 10px 0px 0px;background-color:#0575ac;' +
+            'color:white;">' +
+            tipo + '</label>' +
             '<br><p> <label for="nomebem1" class="formulario__label">Renavam</label><input id="nomebem1" type="text"' +
             'class="formulario__input"     placeholder="Nº do renavam do veículo - Somente números" /> <label for="descbem1" ' +
             'class="formulario__label">Descrição</label> <textarea id="descbem1" class="formulario__input" rows="8" cols="50" ' +
@@ -587,13 +657,20 @@
             'class="formulario__input" placeholder="Informe o valor do bem" /></p>' +
             '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>' +
             '<p>';
-          container.appendChild(div);
         }
-        function removeDiv(element) {
-          var divToRemove = element.parentElement;
-          divToRemove.remove();
+        if (optionValue >= 8){
+          div.innerHTML = '<p>' + 
+          'Envie o extrato do banco ou financeira para inserir os dados na declaração de imposto de renda.'
+          + '<hr>' +
+            '<button class= "excluir" id="excluir" onclick="removeDiv(this)">Excluir</button>';
         }
-      </script>
+        container.appendChild(div);
+      }
+      function removeDiv(element) {
+        var divToRemove = element.parentElement;
+        divToRemove.remove();
+      }
+    </script>
     </div>
 
     <div id="respuesta"></div>
