@@ -43,45 +43,44 @@ document.querySelector("#submit").addEventListener("click", e => {
 		${fecha}%0A
 		*_Título de eleitor_*%0A
 		${titulo}%0A
-		*_Endereço_*%0A
+		*Endereço*%0A
 		${endereco}%0A
 		*_Tipo de conta_*%0A
 		${tipoconta}%0A 
-    *_Tipo de conta_*%0A
     *_Estado civil_*%0A
-${ecivil}%0A 
-*_Bairro_*%0A
-${bairro}%0A 
-*_Cidade_*%0A
-${cidade}%0A
-*_Telefone_*%0A 
-${telefone}%0A 
-*_Profissão_*%0A
-${profissao}%0A 
-*_Banco_*%0A
-${banconome}%0A 
-*_Informações_*%0A
-${infoconta}%0A 
-*_Agência_*%0A
-${divagencia}%0A 
-*_Conta_*%0A
-${divconta}%0A 
-*_Dependente 1_*%0A
-${divdep1}%0A 
-*_Dependente 2_*%0A
-${divdep2}%0A 
-*_Dependente 3_*%0A
-${divdep3}%0A 
-*_Dependente 4_*%0A
-${divdep4}%0A 
-*_Alimentando_*%0A
-${dival1}%0A 
-*_Veículo_*%0A
-${veiculo}%0A 
-*_Imóvel_*%0A
-${imovel}%0A 
-*_Informações_*%0A
-${container2}%0A`;		
+    ${ecivil}%0A 
+    *Bairro*%0A
+    ${bairro}%0A 
+    *Cidade*%0A
+    ${cidade}%0A
+    *Telefone*%0A 
+    ${telefone}%0A 
+    *_Profissão_*%0A
+    ${profissao}%0A 
+    *Banco*%0A
+    ${banconome}%0A 
+    *_Informações_*%0A
+    ${infoconta}%0A 
+    *_Agência_*%0A
+    ${divagencia}%0A 
+    *Conta*%0A
+    ${divconta}%0A 
+    *_Dependente 1_*%0A
+    ${divdep1}%0A 
+    *_Dependente 2_*%0A
+    ${divdep2}%0A 
+    *_Dependente 3_*%0A
+    ${divdep3}%0A 
+    *_Dependente 4_*%0A
+    ${divdep4}%0A 
+    *Alimentando*%0A
+    ${dival1}%0A 
+    *_Veículo_*%0A
+    ${veiculo}%0A 
+    *_Imóvel_*%0A
+    ${imovel}%0A 
+    *_Informações_*%0A
+    ${container2}%0A`;
 
   if (cliente === "" || fecha === "" || titulo === "" || endereco === "") {
     resp.classList.add("fail");
