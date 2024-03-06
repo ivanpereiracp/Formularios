@@ -12,13 +12,16 @@ document.querySelector("#submit").addEventListener("click", e => {
   const bairro = document.querySelector("#bairro").value;
   const cidade = document.querySelector("#cidade").value;
   const telefone = document.querySelector("#telefone").value;
-  const profissao = document.querySelector("#fecha").value;
+  const profissao = document.querySelector("#profissao").value;
   const tipoconta = document.querySelector("#tipoconta").value;
   const banconome = document.querySelector("#banconome").value;
   const infoconta = document.querySelector("#infoconta").value;
   const divagencia = document.querySelector("#divagencia").value;
   const divconta = document.querySelector("#divconta").value;
-  const divdep1 = document.querySelector("#divdep1").value;
+  const tipodep1 = document.querySelector("#tipodep1").value;
+  const nomedep1 = document.querySelector("#nomedep1").value;
+  const datadep1 = document.querySelector("#datadep1").value;
+  const cpfep1 = document.querySelector("#CPFdep1").value;
   const divdep2 = document.querySelector("#divdep2").value;
   const divdep3 = document.querySelector("#divdep3").value;
   const divdep4 = document.querySelector("#divdep4").value;
@@ -65,14 +68,14 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${divagencia}%0A 
     *Conta*%0A
     ${divconta}%0A 
-    *Dependente 1*%0A
-    ${divdep1}%0A 
-    *Dependente 2*%0A
-    ${divdep2}%0A 
-    *Dependente 3*%0A
-    ${divdep3}%0A 
-    *Dependente 4*%0A
-    ${divdep4}%0A 
+    *Tipo de dependente 1*%0A
+    ${tipodep1}%0A 
+    *Nome dependente 1*%0A
+    ${nomedep1}%0A 
+    *Data de nascimento dependente 1*%0A
+    ${datadep1}%0A 
+    *CPF dependente 1*%0A
+    ${cpfdep1}%0A 
     *Alimentando*%0A
     ${dival1}%0A 
     *_Veículo_*%0A
