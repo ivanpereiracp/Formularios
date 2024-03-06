@@ -5,7 +5,7 @@ document.querySelector("#submit").addEventListener("click", e => {
   const telefono = "5543998669972";
 
   const cliente = document.querySelector("#cliente").value;
-  const fecha = document.querySelector("#fecha").value;
+  const datanasc = document.querySelector("#data_nascimento").value;
   const titulo = document.querySelector("#titulo").value;
   const ecivil = document.querySelector("#ecivil").value;
   const endereco = document.querySelector("#endereco").value;
@@ -40,7 +40,7 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*Nome completo*%0A
 		${cliente}%0A
 		*Data de nascimento*%0A
-		${fecha}%0A
+		${datanasc}%0A
 		*_Título de eleitor_*%0A
 		${titulo}%0A
 		*Endereço*%0A
