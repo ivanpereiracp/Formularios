@@ -85,7 +85,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     *_Informações_*%0A
     ${container2}%0A`;
 
-  if (cliente === "" || fecha === "" || titulo === "" || endereco === "") {
+  if (cliente === "" || datanasc === "" || titulo === "" || endereco === "") {
     resp.classList.add("fail");
     resp.innerHTML = `Faltam alguns dados, ${cliente}`;
     return false;
