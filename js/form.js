@@ -5,10 +5,27 @@ document.querySelector("#submit").addEventListener("click", e => {
   const telefono = "5543998669972";
 
   const cliente = document.querySelector("#cliente").value;
-  const titulo = document.querySelector("#titulo").value;
-  const endereco = document.querySelector("#endereco").value;
   const fecha = document.querySelector("#fecha").value;
+  const titulo = document.querySelector("#titulo").value;
+  const ecivil = document.querySelector("#ecivil").value;
+  const endereco = document.querySelector("#endereco").value;
+  const bairro = document.querySelector("#bairro").value;
+  const cidade = document.querySelector("#cidade").value;
+  const telefone = document.querySelector("#telefone").value;
+  const profissao = document.querySelector("#fecha").value;
   const tipoconta = document.querySelector("#tipoconta").value;
+  const banconome = document.querySelector("#banconome").value;
+  const infoconta = document.querySelector("#infoconta").value;
+  const divagencia = document.querySelector("#divagencia").value;
+  const divconta = document.querySelector("#divconta").value;
+  const divdep1 = document.querySelector("#divdep1").value;
+  const divdep2 = document.querySelector("#divdep2").value;
+  const divdep3 = document.querySelector("#divdep3").value;
+  const divdep4 = document.querySelector("#divdep4").value;
+  const dival1 = document.querySelector("#dival1").value;
+  const veiculo = document.querySelector("#veiculo").value;
+  const imovel = document.querySelector("#imovel").value;
+  const container2 = document.querySelector("#container2").value;
   //const hora = document.querySelector("#hora").value;
   //const empleado = document.querySelector("#empleado").value;
   //const servicio = document.querySelector("#servicio").value;
@@ -29,13 +46,42 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*_Endereço_*%0A
 		${endereco}%0A
 		*_Tipo de conta_*%0A
-		${tipoconta}%0A `;		
-		//*Indica la hora de tu reserva*%0A
-		//${hora}%0A
-		//*Empleado de preferencia*%0A
-		//${empleado}%0A
-		//*¿Cuál es el servicio que se desea realizar?*%0A
-		//${servicio}`;
+		${tipoconta}%0A 
+    *_Tipo de conta_*%0A
+    *_Estado civil_*%0A
+${ecivil}%0A 
+*_Bairro_*%0A
+${bairro}%0A 
+*_Cidade_*%0A
+${cidade}%0A
+*_Telefone_*%0A 
+${telefone}%0A 
+*_Profissão_*%0A
+${profissao}%0A 
+*_Banco_*%0A
+${banconome}%0A 
+*_Informações_*%0A
+${infoconta}%0A 
+*_Agência_*%0A
+${divagencia}%0A 
+*_Conta_*%0A
+${divconta}%0A 
+*_Dependente 1_*%0A
+${divdep1}%0A 
+*_Dependente 2_*%0A
+${divdep2}%0A 
+*_Dependente 3_*%0A
+${divdep3}%0A 
+*_Dependente 4_*%0A
+${divdep4}%0A 
+*_Alimentando_*%0A
+${dival1}%0A 
+*_Veículo_*%0A
+${veiculo}%0A 
+*_Imóvel_*%0A
+${imovel}%0A 
+*_Informações_*%0A
+${container2}%0A`;		
 
   if (cliente === "" || fecha === "" || titulo === "" || endereco === "") {
     resp.classList.add("fail");
