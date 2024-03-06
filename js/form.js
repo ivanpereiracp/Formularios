@@ -47,7 +47,7 @@ document.querySelector("#submit").addEventListener("click", e => {
 		${endereco}%0A
 		*_Tipo de conta_*%0A
 		${tipoconta}%0A 
-    *_Estado civil_*%0A
+    *Estado civil*%0A
     ${ecivil}%0A 
     *Bairro*%0A
     ${bairro}%0A 
@@ -65,13 +65,13 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${divagencia}%0A 
     *Conta*%0A
     ${divconta}%0A 
-    *_Dependente 1_*%0A
+    *Dependente 1*%0A
     ${divdep1}%0A 
-    *_Dependente 2_*%0A
+    *Dependente 2*%0A
     ${divdep2}%0A 
-    *_Dependente 3_*%0A
+    *Dependente 3*%0A
     ${divdep3}%0A 
-    *_Dependente 4_*%0A
+    *Dependente 4*%0A
     ${divdep4}%0A 
     *Alimentando*%0A
     ${dival1}%0A 
