@@ -21,6 +21,21 @@ document.querySelector("#submit").addEventListener("click", e => {
   const nomedep1 = document.querySelector("#nomedep1").value;
   const datadep1 = document.querySelector("#datadep1").value;
   const cpfdep1 = document.querySelector("#cpfdepe1").value;
+  const tipodep2 = document.querySelector("#tipodep2").value;
+  const nomedep2 = document.querySelector("#nomedep2").value;
+  const datadep2 = document.querySelector("#datadep2").value;
+  const cpfdep2 = document.querySelector("#cpfdepe2").value;
+  const tipodep3 = document.querySelector("#tipodep3").value;
+  const nomedep3 = document.querySelector("#nomedep3").value;
+  const datadep3 = document.querySelector("#datadep3").value;
+  const cpfdep3 = document.querySelector("#cpfdepe3").value;
+  const tipodep4 = document.querySelector("#tipodep4").value;
+  const nomedep4 = document.querySelector("#nomedep4").value;
+  const datadep4 = document.querySelector("#datadep4").value;
+  const cpfdep4 = document.querySelector("#cpfdepe4").value;
+  const nomeal1 = document.querySelector("#nomeal1").value;
+  const dataal1 = document.querySelector("#dataal1").value;
+  const cpfal1 = document.querySelector("#CPFal1").value;
   //const dival1 = document.querySelector("#dival1").value;
   //const veiculo = document.querySelector("#veiculo").value;
   //const imovel = document.querySelector("#imovel").value;
@@ -69,15 +84,35 @@ document.querySelector("#submit").addEventListener("click", e => {
     *Data de nascimento dependente 1*%0A
     ${datadep1}%0A 
     *CPF dependente 1*%0A
-    ${cpfdep1}%0A 
-    *Alimentando*%0A
-    ${dival1}%0A 
-    *_Veículo_*%0A
-    ${veiculo}%0A 
-    *_Imóvel_*%0A
-    ${imovel}%0A 
-    *_Informações_*%0A
-    ${container2}%0A`;
+    ${cpfdep1}%0A
+    ${tipodep2}%0A 
+    *Nome dependente 2*%0A
+    ${nomedep2}%0A 
+    *Data de nascimento dependente 2*%0A
+    ${datadep2}%0A 
+    *CPF dependente 2*%0A
+    ${cpfdep2}%0A 
+    ${tipodep3}%0A 
+    *Nome dependente 3*%0A
+    ${nomedep3}%0A 
+    *Data de nascimento dependente 3*%0A
+    ${datadep3}%0A 
+    *CPF dependente 3*%0A
+    ${cpfdep3}%0A 
+    ${tipodep4}%0A 
+    *Nome dependente 4*%0A
+    ${nomedep4}%0A 
+    *Data de nascimento dependente 4*%0A
+    ${datadep4}%0A 
+    *CPF dependente 4*%0A
+    ${cpfdep4}%0A 
+    *Nome*%0A
+    ${nomeal1}%0A 
+    *_Data de nascimento_*%0A
+    ${dataal1}%0A 
+    *_CPF_*%0A
+    ${CPFal1}%0A
+    `;
 
   if (cliente === "" || datanasc === "" || titulo === "" || endereco === "") {
     resp.classList.add("fail");
