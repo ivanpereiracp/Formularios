@@ -51,7 +51,8 @@ document.querySelector("#submit").addEventListener("click", e => {
   const url = `https://api.whatsapp.com/send?phone=${telefono}&text=
 		*_DECLARAÇÃO DE IMPOSTO DE RENDA_*%0A
 		*Dados necessários*%0A%0A
-		*Nome completo*%0A
+    *Dados Pessoais*%0A
+    *Nome completo*%0A
 		${cliente}%0A
 		*Data de nascimento*%0A
 		${datanasc}%0A
@@ -71,41 +72,51 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${telefone}%0A 
     *_Profissão_*%0A
     ${profissao}%0A 
+    *_Dados Bancários_*%0A    
     *Banco*%0A
     ${banconome}%0A 
     *_Agência_*%0A
     ${agencia}%0A 
     *Conta*%0A
     ${conta}%0A 
-    *Tipo de dependente 1*%0A
+    *DEPENDENTES*%0A
+    *Dependente 1*%0A
+    *Tipo*%0A
     ${tipodep1}%0A 
-    *Nome dependente 1*%0A
+    *Nome*%0A
     ${nomedep1}%0A 
-    *Data de nascimento dependente 1*%0A
+    *Data de nascimento*%0A
     ${datadep1}%0A 
-    *CPF dependente 1*%0A
+    *CPF*%0A
     ${cpfdep1}%0A
+    *Dependente 2*%0A
+    *Tipo*%0A
     ${tipodep2}%0A 
-    *Nome dependente 2*%0A
+    *Nome*%0A
     ${nomedep2}%0A 
-    *Data de nascimento dependente 2*%0A
+    *Data de nascimento*%0A
     ${datadep2}%0A 
-    *CPF dependente 2*%0A
+    *CPF*%0A
     ${cpfdep2}%0A 
+    *Dependente 3*%0A
+    *Tipo*%0A
     ${tipodep3}%0A 
-    *Nome dependente 3*%0A
+    *Nome*%0A
     ${nomedep3}%0A 
-    *Data de nascimento dependente 3*%0A
+    *Data de nascimento*%0A
     ${datadep3}%0A 
-    *CPF dependente 3*%0A
-    ${cpfdep3}%0A 
+    *CPF*%0A
+    ${cpfdep3}%0A
+    *Dependente 4*%0A 
+    *Tipo*%0A
     ${tipodep4}%0A 
-    *Nome dependente 4*%0A
+    *Nome*%0A
     ${nomedep4}%0A 
-    *Data de nascimento dependente 4*%0A
+    *Data de nascimento*%0A
     ${datadep4}%0A 
-    *CPF dependente 4*%0A
+    *CPF*%0A
     ${cpfdep4}%0A 
+    *Alimentando*%0A
     *Nome*%0A
     ${nomeal1}%0A 
     *_Data de nascimento_*%0A
