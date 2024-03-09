@@ -111,7 +111,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     *_Data de nascimento_*%0A
     ${dataal1}%0A 
     *_CPF_*%0A
-    ${CPFal1}%0A
+    ${cpfal1}%0A
     `;
 
   if (cliente === "" || datanasc === "" || titulo === "" || endereco === "") {
