@@ -62,12 +62,10 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${profissao}%0A 
     *Banco*%0A
     ${banconome}%0A 
-    *_Informações_*%0A
-    ${infoconta}%0A 
     *_Agência_*%0A
-    ${divagencia}%0A 
+    ${agencia}%0A 
     *Conta*%0A
-    ${divconta}%0A 
+    ${conta}%0A 
     *Tipo de dependente 1*%0A
     ${tipodep1}%0A 
     *Nome dependente 1*%0A
@@ -75,7 +73,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     *Data de nascimento dependente 1*%0A
     ${datadep1}%0A 
     *CPF dependente 1*%0A
-    ${cpfdep1}%0A 
+    ${CPFdep1}%0A 
     *Alimentando*%0A
     ${dival1}%0A 
     *_Veículo_*%0A
