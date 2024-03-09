@@ -16,12 +16,12 @@ document.querySelector("#submit").addEventListener("click", e => {
   const tipoconta = document.querySelector("#tipoconta").value;
   const banconome = document.querySelector("#banconome").value;
   const infoconta = document.querySelector("#infoconta").value;
-  const agencia = document.querySelector("#divagencia").value;
-  const conta = document.querySelector("#divconta").value;
+  const agencia = document.querySelector("#agencia").value;
+  const conta = document.querySelector("#conta").value;
   const tipodep1 = document.querySelector("#tipodep1").value;
   const nomedep1 = document.querySelector("#nomedep1").value;
   const datadep1 = document.querySelector("#datadep1").value;
-  const cpfdep1 = document.querySelector("#CPFdep1").value;
+  const cpfdep1 = document.querySelector("#cpfdep1").value;
   const divdep2 = document.querySelector("#divdep2").value;
   const divdep3 = document.querySelector("#divdep3").value;
   const divdep4 = document.querySelector("#divdep4").value;
@@ -73,7 +73,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     *Data de nascimento dependente 1*%0A
     ${datadep1}%0A 
     *CPF dependente 1*%0A
-    ${CPFdep1}%0A 
+    ${cpfdep1}%0A 
     *Alimentando*%0A
     ${dival1}%0A 
     *_Veículo_*%0A
