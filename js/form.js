@@ -36,13 +36,19 @@ document.querySelector("#submit").addEventListener("click", e => {
   const nomeal1 = document.querySelector("#nomeal1").value;
   const dataal1 = document.querySelector("#dataal1").value;
   const cpfal1 = document.querySelector("#CPFal1").value;
-  //const dival1 = document.querySelector("#dival1").value;
-  //const veiculo = document.querySelector("#veiculo").value;
-  //const imovel = document.querySelector("#imovel").value;
-  //const container2 = document.querySelector("#container2").value;
-  //const hora = document.querySelector("#hora").value;
-  //const empleado = document.querySelector("#empleado").value;
-  //const servicio = document.querySelector("#servicio").value;
+  const inscbem = document.querySelector("#inscbem").value;
+  const dataaq = document.querySelector("#dataaq").value;
+  const desqbem = document.querySelector("#descbem").value;
+  const endbem = document.querySelector("#endbem").value;
+  const numbem = document.querySelector("#numbem").value;
+  const bairrobem = document.querySelector("#bairrobem").value;
+  const cidadebem = document.querySelector("#cidadebem").value;
+  const regcart = document.querySelector("#regcart").value;
+  const matbem = document.querySelector("#matbem").value;
+  const cartbem = document.querySelector("#cartbem").value;
+  const valorbem = document.querySelector("#valorbem").value;
+  const descve = document.querySelector("#descve").value;
+  const valorve = document.querySelector("#valorve").value;
   const resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
@@ -72,7 +78,7 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${telefone}%0A 
     *_Profissão_*%0A
     ${profissao}%0A 
-    *_Dados Bancários_*%0A    
+    *Dados Bancários*%0A    
     *Banco*%0A
     ${banconome}%0A 
     *_Agência_*%0A
@@ -123,6 +129,36 @@ document.querySelector("#submit").addEventListener("click", e => {
     ${dataal1}%0A 
     *_CPF_*%0A
     ${cpfal1}%0A
+
+    *Bens e direitos*%0A
+    *Número de inscrição*%0A
+    ${inscbem}%0A
+    *Data de aquisição*%0A
+    ${dataaq}%0A
+    *Descrição*%0A
+    ${desqbem}%0A
+    *Endereço*%0A
+    ${endbem}%0A
+    *Número*%0A
+    ${numbem}%0A
+    *Bairro*%0A
+    ${bairrobem}%0A
+    *Cidade*%0A
+    ${cidadebem}%0A
+    *Registrado em cartório*%0A
+    ${regcart}%0A
+    *Matrícula*%0A
+    ${matbem}%0A 
+    *Cartório*%0A
+    ${cartbem}%0A
+    *Valor*%0A
+    ${valorbem}%0A
+    *Descrição*%0A
+    ${descve}%0A 
+    *Valor*%0A
+    ${valorve}%0A
+    *_Data de nascimento_*%0A
+    ${resp}%0A 
     `;
 
   if (cliente === "" || datanasc === "" || titulo === "" || endereco === "") {
